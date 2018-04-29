@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+	  <h1>Créditos</h1>
+
+	  <img src="/images/mi_foto.jpg"/>
+
+	  <p>
+	       Saúl Pérez-Silguero.
+	  </p>
+
+	  <% if(typeof quizzes !== 'undefined') { %>
+		  <% for (var i in quizzes) { %>
+		  <% var quiz = quizzes[i]; %>
+		  <p>
+		     <%= quiz.question %>: <%= quiz.answer %>
+		  </p> 
+
+		  <% }
+	  } %>
+  </body>
+</html>
+
